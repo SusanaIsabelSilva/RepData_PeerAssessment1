@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 by Susana Isabel Silva (May, 2015)
 
 ## Introduction
@@ -142,7 +147,7 @@ convert date variable to date data type
   new_activity$weekday <- as.factor(new_activity$weekday)
 ```
 
-2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis): using lattice plotting system (to look like the exemple given).
+2. Make a panel plot containing a time series plot (i.e. `type = "l"`) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis): using lattice plotting system (to look like the exemple given).
 ```{r}
   ## Create a new variable with the average steps for each 5-minute interval and weekday variable
   new_activity[,avgsteps:=mean(steps),by=.(interval,weekday)]
